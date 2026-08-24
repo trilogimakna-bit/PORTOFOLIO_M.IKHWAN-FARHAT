@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - M. Ikhwan Farhat</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        display: ['Bebas Neue', 'sans-serif'],
+                    },
+                    colors: {
+                        'crimson-dark': '#5c0514',
+                        'crimson-main': '#990f23',
+                        'crimson-bright': '#d91b36',
+                        'dark-bg': '#03080e',
+                        'dark-card': '#07121c',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom scrollbar and ambient glowing effects matching reference image */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #03080e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #990f23;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d91b36;
+        }
+
+        /* Cinematic Background Gradient */
+        .cinematic-bg {
+            background: radial-gradient(circle at 85% 20%, #0d273a 0%, #051420 35%, #02070d 80%);
+        }
+
+        /* Portrait Crimson Arch Effect matching reference image */
+        .crimson-glow-bg {
+            background: radial-gradient(circle at 50% 60%, rgba(153, 15, 35, 0.45) 0%, rgba(3, 8, 14, 0) 70%);
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-slate-100 relative bg-[#02070d] selection:bg-crimson-bright selection:text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full z-50 bg-[#03080e]/90 backdrop-blur-md border-b border-crimson-main/20 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="font-display font-bold text-3xl text-white tracking-wider hover:text-crimson-bright transition-colors">Portofolio - M. Ikhwan Farhat</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-slate-300 hover:text-crimson-bright transition-colors font-medium text-sm uppercase tracking-wider">About</a>
+                    <a href="#experience" class="text-slate-300 hover:text-crimson-bright transition-colors font-medium text-sm uppercase tracking-wider">Experience</a>
+                    <a href="#education" class="text-slate-300 hover:text-crimson-bright transition-colors font-medium text-sm uppercase tracking-wider">Education</a>
+                    <a href="#projects" class="text-slate-300 hover:text-crimson-bright transition-colors font-medium text-sm uppercase tracking-wider">Projects</a>
+                    <a href="#contact" class="text-slate-300 hover:text-crimson-bright transition-colors font-medium text-sm uppercase tracking-wider">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-crimson-bright focus:outline-none p-2" aria-label="Toggle Navigation">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#050e18] border-b border-crimson-main/20 pb-4 transition-all">
+            <a href="#about" class="block px-6 py-2.5 text-slate-200 hover:bg-crimson-main/20 hover:text-white transition-colors">About</a>
+            <a href="#experience" class="block px-6 py-2.5 text-slate-200 hover:bg-crimson-main/20 hover:text-white transition-colors">Experience</a>
+            <a href="#education" class="block px-6 py-2.5 text-slate-200 hover:bg-crimson-main/20 hover:text-white transition-colors">Education</a>
+            <a href="#projects" class="block px-6 py-2.5 text-slate-200 hover:bg-crimson-main/20 hover:text-white transition-colors">Projects</a>
+            <a href="#contact" class="block px-6 py-2.5 text-slate-200 hover:bg-crimson-main/20 hover:text-white transition-colors">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden cinematic-bg">
+            <!-- Background glow layer -->
+            <div class="absolute inset-0 crimson-glow-bg pointer-events-none z-10"></div>
+
+            <div class="relative w-full h-screen max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-center">
+
+                <!-- Date (top-left) -->
+                <div class="absolute z-40 top-40 left-8 md:top-60 md:left-12 lg:top-50 lg:left-16">
+                    <div class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-200 uppercase tracking-wider drop-shadow-md">25 MEI 2003</div>
+                </div>
+
+                <!-- Small header (top-right) -->
+                <div class="absolute z-40 top-40 right-8 md:top-60 md:right-12 lg:top-50 lg:right-16 text-right">
+                    <div class="text-2xl md:text-3xl font-black text-slate-200 uppercase tracking-widest drop-shadow-md">M. IKHWAN FARHAT</div>
+                </div>
+
+                <!-- Giant background word (center) -->
+                <h1 class="absolute z-0 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[4.5rem] sm:text-[7.5rem] md:text-[10rem] lg:text-[13rem] font-display font-black text-slate-200/90 leading-none tracking-[0.08em] whitespace-nowrap select-none pointer-events-none drop-shadow-[0_10px_25px_rgba(0,0,0,0.8)]">
+                    PORTOFOLIO.
+                </h1>
+
+                <!-- Quote (left-bottom, aligned under left edge of PORTOFOLIO) -->
+                <div class="absolute z-40 bottom-30 left-8 md:bottom-60 md:left-12 lg:bottom-95 lg:left-95 max-w-[320px]">
+                    <p class="text-sm md:text-base text-slate-300 leading-relaxed bg-black/30 backdrop-blur-xs p-4 rounded-lg border-l-2 border-crimson-bright">
+                        "Walau kering, bisakah kita tetap membasuh?".<br>
+                        <span class="font-semibold text-slate-400 block mt-2 text-xs uppercase tracking-wider">Hindia - "Membasuh" dalam Album <i>Menari dengan Bayangan</i></span>
+                    </p>
+                </div>
+
+                <!-- Main name (right of PORTOFOLIO, vertically centered) -->
+                <div class="absolute z-40 top-1/2 right-2 transform -translate-y-1/2 md:right-12 lg:right-16 text-right max-w-[320px]">
+                    <div class="text-2xl md:text-3xl font-bold text-slate-200 leading-tight uppercase tracking-wide">Multimedia</div>
+                    <div class="mt-2 text-3xl md:text-4xl font-extrabold text-crimson-bright drop-shadow-[0_0_15px_rgba(217,27,54,0.4)]">Spesialist</div>
+                </div>
+
+                <!-- Foreground: subject photo and decorative gradient -->
+                <div class="relative w-full flex justify-center items-end h-full z-20 pointer-events-auto">
+                    <div class="relative flex justify-center items-center w-full max-w-[640px]">
+
+                        <!-- subject image -->
+                        <img src="foto%20ikhwan.png" alt="IKH Portrait" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop'" class="relative mx-auto w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px] h-auto object-cover contrast-110 drop-shadow-[0_28px_40px_rgba(0,0,0,0.7)] z-20 rounded-b-3xl" />
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="about" class="section-min-height py-24 relative overflow-hidden cinematic-bg">
+            <!-- Layer Background Glow Crimson -->
+            <div class="absolute inset-0 crimson-glow-bg pointer-events-none z-0"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Foto Profil -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl relative border border-crimson-main/30 bg-[#050e18]">
+                            <!-- Overlay aksen merah gelap -->
+                            <div class="absolute inset-0 bg-crimson-main/15 mix-blend-multiply z-10 pointer-events-none"></div>
+                            <img src="IKH_1.jpg" alt="About Me Portrait" class="w-full h-full object-cover grayscale-[20%] contrast-110" />
+                        </div>
+                    </div>
+
+                    <!-- Teks & Konten -->
+                    <div class="lg:col-span-7 space-y-8">
+                        <div>
+                            <span class="text-4xl font-display text-crimson-bright/40 block mb-1">02</span>
+                            <h2 class="text-5xl font-display font-bold text-white mb-1 tracking-wide">
+                                About <span class="text-crimson-bright drop-shadow-[0_0_15px_rgba(217,27,54,0.4)]">Me</span>
+                            </h2>
+                            <h3 class="text-2xl font-serif italic text-slate-300 mb-6">M. Ikhwan Farhat</h3>
+                        </div>
+
+                        <p class="text-lg text-slate-300 leading-relaxed text-justify">
+                            Mahasiswa Matematika Murni UIN Syarif Hidayatullah Jakarta yang berdedikasi dan berjiwa kreatif dengan spesialisasi sebagai Multimedia Specialist. Memiliki kombinasi unik antara pola pikir analitis, logis, dan pemecahan masalah dari latar belakang matematika, serta keahlian teknis yang kuat di bidang fotografi, videografi, photo &amp; video editing, desain grafis, produksi podcast/broadcasting, hingga desain UI/UX dan analisis data. Berpengalaman mengelola vendor kreatif (Trilogi Makna Creative), menangani liputan brand activation skala nasional (Polygon x Auto Culture, INDOFEST), fotografi olahraga, serta aktif dalam pameran seni dan organisasi fotografi.
+                        </p>
+                        
+                        <!-- Cards Grid -->
+                        <div class="grid gap-6 md:grid-cols-2">
+                            <!-- Core Expertise Card -->
+                            <div class="bg-[#07121c]/80 backdrop-blur-sm p-8 rounded-2xl border-l-4 border-crimson-bright border border-white/5 shadow-xl">
+                                <h4 class="text-xl font-bold text-white mb-4">Core Expertise</h4>
+                                <div class="space-y-6 text-slate-300">
+                                    <div>
+                                        <p class="font-semibold text-white">Multimedia &amp; Production</p>
+                                        <p class="mt-2 text-sm leading-relaxed text-slate-400">Fotografi (Sport, Event, Commercial, Visual Concept), Videografi, Photo &amp; Video Editing, Graphic Design, Podcast Broadcasting &amp; Production, Desain UI/UX Website</p>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-white">Software &amp; Tools</p>
+                                        <p class="mt-2 text-sm leading-relaxed text-slate-400">Adobe Photoshop, Adobe Lightroom, Adobe Premiere Pro, Capture One, Canva, Visual Studio Code, Antigravity</p>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-white">Teknis &amp; Analitis</p>
+                                        <p class="mt-2 text-sm leading-relaxed text-slate-400">Desain &amp; Pembuatan Website, UI/UX Layouting, Analisis Data (Data Analysis)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Soft Skills Card -->
+                            <div class="bg-[#07121c]/80 backdrop-blur-sm p-8 rounded-2xl border-l-4 border-crimson-main border border-white/5 shadow-xl">
+                                <h4 class="text-xl font-bold text-white mb-4">Soft Skills</h4>
+                                <ul class="space-y-3 text-slate-300">
+                                    <li class="flex items-start">
+                                        <svg class="h-5 w-5 text-crimson-bright mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <span>Public Speaking</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="h-5 w-5 text-crimson-bright mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <span>Komunikasi Efektif</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="h-5 w-5 text-crimson-bright mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <span>Creative Direction</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="h-5 w-5 text-crimson-bright mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <span>Project Management</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="h-5 w-5 text-crimson-bright mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <span>Kerja Sama Tim</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="h-5 w-5 text-crimson-bright mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <span>Berpikir Analitis &amp; Solutif</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section-min-height py-20 bg-slate-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="space-y-10">
+                    <div>
+                         <span class="text-4xl font-display text-orange-accent opacity-50 block mb-2">03</span>
+                        <h2 class="text-sm font-serif italic text-orange-accent mb-2 text-xl">My</h2>
+                        <h3 class="text-5xl font-display font-bold text-red-400 mb-6 uppercase tracking-tight">Experiences</h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 xl:grid-cols-[3fr_1fr] gap-8 items-stretch">
+                        <div class="xl:col-span-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-min">
+                            <div class="space-y-3 border-l-2 border-yellow-highlight pl-6 relative rounded-3xl bg-slate-800 p-5 shadow-sm">
+                                <div class="absolute w-4 h-4 bg-yellow-highlight rounded-full -left-[9px] top-5"></div>
+                                <h4 class="text-xl font-bold text-white">Founder & Creative Lead</h4>
+                                <p class="text-orange-accent font-medium text-sm mb-3">Trilogi Makna Creative — 2025 – Sekarang</p>
+                                <ul class="list-disc list-inside text-slate-300 space-y-2">
+                                    <li>Mendirikan dan mengelola bisnis vendor kreatif yang berfokus pada layanan fotografi dan videografi profesional, sekaligus bertindak sebagai penyedia creative management untuk memproduksi kebutuhan B2B.</li>
+                                    <li>Mengarahkan konsep visual, strategi produksi, penyuntingan akhir, serta mengendalikan quality control untuk seluruh proyek klien.</li>
+                                    <li>Mengelola hubungan dengan klien, pemetaan anggaran produksi, serta strategi komunikasi pemasaran merek.</li>
+                                </ul>
+                            </div>
+
+                            <div class="space-y-3 border-l-2 border-yellow-highlight pl-6 relative rounded-3xl bg-slate-800 p-5 shadow-sm">
+                                <div class="absolute w-4 h-4 bg-yellow-highlight rounded-full -left-[9px] top-5"></div>
+                                <h4 class="text-xl font-bold text-white">Photographer & Videographer</h4>
+                                <p class="text-orange-accent font-medium text-sm mb-3">Prodigy Art Creative — Agustus 2025 – Sekarang</p>
+                                <ul class="list-disc list-inside text-slate-300 space-y-2">
+                                    <li>Bertanggung jawab atas pengambilan foto dan video untuk proyek buku tahunan sekolah dan instansi.</li>
+                                    <li>Mengatur pencahayaan (lighting), komposisi visual, serta pengarahan gaya (directing) klien di lokasi pemotretan.</li>
+                                    <li>Melakukan proses pascaproduksi (penyuntingan foto dan video) menggunakan software profesional sesuai dengan konsep visual yang disepakati.</li>
+                                </ul>
+                            </div>
+
+                            <div class="space-y-3 border-l-2 border-yellow-highlight pl-6 relative rounded-3xl bg-slate-800 p-5 shadow-sm">
+                                <div class="absolute w-4 h-4 bg-yellow-highlight rounded-full -left-[9px] top-5"></div>
+                                <h4 class="text-xl font-bold text-white">Brand Activation Specialist</h4>
+                                <p class="text-orange-accent font-medium text-sm mb-3">POLYGON X AUTO CULTURE 2025</p>
+                                <ul class="list-disc list-inside text-slate-300 space-y-2">
+                                    <li>Merekam dan mendokumentasikan kegiatan brand activation Polygon pada acara kolaborasi otomotif dan gaya hidup Auto Culture 2025.</li>
+                                    <li>Menyusun dan memproduksi aset visual berkualitas tinggi guna memperkuat kehadiran merek dan interaksi audiens.</li>
+                                    <li>Menyoroti berbagai aktivitas utama aktivasi merek di lapangan, yang mencakup pameran produk (product showcase), experiential marketing, dan interaksi langsung dengan pengunjung.</li>
+                                    <li>Menghasilkan materi dokumentasi yang dirancang khusus untuk memperkuat kehadiran merek (brand presence) dan meningkatkan keterlibatan audiens secara signifikan.</li>
+                                </ul>
+                            </div>
+
+                            <div class="space-y-3 border-l-2 border-yellow-highlight pl-6 relative rounded-3xl bg-slate-800 p-5 shadow-sm">
+                                <div class="absolute w-4 h-4 bg-yellow-highlight rounded-full -left-[9px] top-5"></div>
+                                <h4 class="text-xl font-bold text-white">Tim Media & Brand Activation Polygon</h4>
+                                <p class="text-orange-accent font-medium text-sm mb-3">INDOFEST — 2024 & 2025</p>
+                                <ul class="list-disc list-inside text-slate-300 space-y-2">
+                                    <li>Menjadi bagian dari tim media resmi Polygon selama pameran outdoor terbesar di Indonesia dua tahun berturut-turut.</li>
+                                    <li>Mendokumentasikan aktivitas booth, product display, peluncuran produk, serta interaksi pengunjung untuk kebutuhan publikasi dan konten promosi.</li>
+                                    <li>Menyoroti berbagai aktivitas utama aktivasi merek di lapangan, yang mencakup pameran produk (product showcase), experiential marketing, dan interaksi langsung dengan pengunjung.</li>
+                                    <li>Mengelola produksi aset visual berkualitas tinggi secara menyeluruh sebagai bagian dari penyediaan kebutuhan komersial B2B.<li>
+                                </ul>
+                            </div>
+
+                            <div class="space-y-3 border-l-2 border-yellow-highlight pl-6 relative rounded-3xl bg-slate-800 p-5 shadow-sm">
+                                <div class="absolute w-4 h-4 bg-yellow-highlight rounded-full -left-[9px] top-5"></div>
+                                <h4 class="text-xl font-bold text-white">Sport Photographer</h4>
+                                <p class="text-orange-accent font-medium text-sm mb-3">Additional Player — Juli 2024 – Desember 2024</p>
+                                <ul class="list-disc list-inside text-slate-300 space-y-2">
+                                    <li>Merekam momen dinamika dan aksi cepat pertandingan olahraga dengan presisi dan ketepatan tinggi.</li>
+                                    <li>Melakukan pengolahan warna (color grading) dan retouching foto secara cepat menggunakan Capture One dan Lightroom untuk kebutuhan publikasi pascamatch.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-1 flex items-start">
+                            <div class="grid gap-6 mx-auto max-w-[320px] w-full"> 
+                                <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[3/4]">
+                                    <video class="w-full h-full object-cover" autoplay muted loop playsinline poster="bts.jpeg">
+                                        <source src="BTS Phielle.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[3/4]">
+                                    <img src="bts2.jpeg" alt="Working Environment 2" class="w-full h-full object-cover" />
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section-min-height py-24 relative overflow-hidden cinematic-bg">
+            <!-- Background Glow Crimson -->
+            <div class="absolute inset-0 crimson-glow-bg pointer-events-none z-0"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="flex flex-col lg:flex-row gap-16 justify-between items-center">
+                    
+                    <!-- Left Column: Title & Image -->
+                    <div class="lg:w-1/3 text-center lg:text-left">
+                        <span class="text-4xl font-display text-crimson-bright/40 block mb-1">04</span>
+                        <h2 class="text-xl font-serif italic text-crimson-bright mb-1">Education</h2>
+                        <h3 class="text-5xl font-display font-bold text-white uppercase tracking-wider drop-shadow-md">
+                            &amp; <span class="text-crimson-bright drop-shadow-[0_0_15px_rgba(217,27,54,0.4)]">Organisasi</span>
+                        </h3>
+                        
+                        <div class="mt-12 relative w-64 h-64 sm:w-80 sm:h-80 mx-auto lg:mx-0 rounded-full overflow-hidden border-4 border-crimson-main/40 shadow-[0_0_30px_rgba(153,15,35,0.3)] bg-[#050e18]">
+                            <img src="https://placehold.co/600x600/07121c/d91b36?text=Education" alt="Education" class="w-full h-full object-cover contrast-110" />
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Education & Organization Cards -->
+                    <div class="lg:w-2/3 flex flex-col justify-center space-y-6 w-full">
+                        
+                        <!-- Card 1: Formal Education -->
+                        <div class="relative bg-[#07121c]/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl border-l-4 border-crimson-bright border border-white/5">
+                            <h4 class="text-2xl font-bold text-white mb-2">S1 Matematika Murni | UIN Syarif Hidayatullah Jakarta</h4>
+                            <p class="text-crimson-bright font-medium text-sm mb-4 uppercase tracking-wider">Mahasiswa Aktif</p>
+                            <p class="text-slate-300 leading-relaxed text-justify">
+                                Relevansi Fokus: Mengembangkan penalaran logis, analisis terstruktur, pemrosesan data, serta pemecahan masalah kompleks yang diaplikasikan dalam optimasi desain visual, alur UI/UX, dan analisis data multimedia.
+                            </p>
+                        </div>
+
+                        <!-- Card 2: KMF Kalacitra -->
+                        <div class="relative bg-[#07121c]/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl border-l-4 border-crimson-main border border-white/5">
+                            <h4 class="text-2xl font-bold text-white mb-2">Anggota Divisi Pameran | KMF Kalacitra UIN Jakarta</h4>
+                            <p class="text-slate-400 font-medium text-sm mb-4">Komunitas Mahasiswa Fotografi</p>
+                            <ul class="list-disc list-inside text-slate-300 space-y-2">
+                                <li>Merencanakan, mengonsep, dan mengeksekusi penataan tata letak (layouting), kurasi karya visual, serta teknis penyelenggaraan pameran fotografi.</li>
+                                <li>Berkolaborasi dengan tim karya dan media untuk memastikan penyampaian pesan serta estetika pameran berjalan optimal.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Card 3: Lensa Anak Terminal -->
+                        <div class="relative bg-[#07121c]/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl border-l-4 border-crimson-bright border border-white/5">
+                            <h4 class="text-2xl font-bold text-white mb-2">Divisi Event &amp; Venue (Mentor) | Komunitas Lensa Anak Terminal</h4>
+                            <ul class="list-disc list-inside text-slate-300 space-y-2 mt-4">
+                                <li>Mengelola persiapan lokasi (venue) serta tata kelola teknis acara untuk mendukung kelancaran kegiatan komunitas.</li>
+                                <li>Berkontribusi aktif dalam perancangan konsep acara, pengorganisasian tim, dan dokumentasi visual kegiatan sosial komunitas.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects-intro" class="py-32 bg-orange-deep relative overflow-hidden">
+             <!-- Abstract background pattern -->
+             <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#FDFBF7 2px, transparent 2px); background-size: 30px 30px;"></div>
+             
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <h2 class="text-4xl md:text-5xl font-serif italic text-yellow-highlight mb-4">Sample</h2>
+                <h3 class="text-7xl md:text-9xl font-display font-bold text-white uppercase tracking-wider drop-shadow-lg">Projects</h3>
+                
+                <!-- Floating decorative images representing project snippets -->
+                <div class="absolute top-0 left-10 w-32 h-32 bg-slate-800 p-2 shadow-2xl transform -rotate-6 hidden md:block border-4 border-orange-accent">
+                    <img src="https://placehold.co/200x200/2C2A29/FFBA08?text=UI" class="w-full h-full object-cover" />
+                </div>
+                <div class="absolute top-24 right-20 w-28 h-28 bg-slate-800 p-2 shadow-2xl transform rotate-3 hidden sm:block border-4 border-orange-accent z-20">
+                    <img src="kamera.jpg" alt="Kamera" onerror="this.onerror=null; this.src='https://placehold.co/180x180/2C2A29/FFBA08?text=Kamera'" class="w-full h-full object-cover" />
+                </div>
+                <div class="absolute bottom-10 left-24 w-28 h-28 bg-slate-800 p-2 shadow-2xl transform -rotate-3 hidden sm:block border-4 border-orange-accent z-20">
+                    <img src="https://placehold.co/180x180/FFBA08/2C2A29?text=Brand" class="w-full h-full object-cover" />
+                </div>
+                <div class="absolute bottom-0 right-10 w-32 h-32 bg-slate-800 p-2 shadow-2xl transform rotate-12 hidden md:block border-4 border-orange-accent">
+                     <img src="https://placehold.co/200x200/E85D04/FFFFFF?text=Mobile" class="w-full h-full object-cover" />
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section-min-height py-20 bg-slate-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                    
+                    <!-- Text Area -->
+                    <div class="lg:col-span-5 bg-slate-800 p-12 flex flex-col justify-center rounded-2xl shadow-sm border border-orange-accent/10">
+                        <span class="text-4xl font-display text-orange-accent opacity-50 block mb-8">05</span>
+                        <h3 class="text-2xl font-serif italic text-orange-accent mb-2">Project</h3>
+                        <h2 class="text-5xl font-display font-bold text-red-400 mb-8 uppercase tracking-tight">WEBSITE</h2>
+                        <p class="text-lg text-slate-200 leading-relaxed text-justify">
+                            Proyek ini merupakan pengembangan website platform kreatif yang dirancang secara menyeluruh (end-to-end). Alur pengerjaan dimulai dari perumusan case study dan riset kebutuhan audiens, penyusunan arsitektur informasi, hingga perancangan desain UI/UX yang modern, intuitif, dan responsif. Tahap eksekusi dilanjutkan dengan proses development dan coding untuk membangun integrasi galeri portofolio interaktif, pengelolaan aset visual beresolusi tinggi, serta optimasi performa deployment guna menghadirkan representasi identitas digital yang profesional, fungsional, dan bernilai estetika tinggi.
+                        </p>
+                    </div>
+
+                    <!-- Image Grid -->
+                    <div class="lg:col-span-7 grid grid-cols-2 gap-4">
+                        <div class="col-span-2 h-64 rounded-2xl overflow-hidden shadow-md group">
+                             <img src="website/2.png" alt="Project 1 Main" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" />
+                        </div>
+                        <div class="h-64 rounded-2xl overflow-hidden shadow-md group">
+                             <img src="website/1.png" alt="Project 1 Detail 1" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" />
+                        </div>
+                        <div class="h-64 rounded-2xl overflow-hidden shadow-md group">
+                             <img src="website/3.png" alt="Project 1 Detail 2" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ELEMEN PEMISAH (DIVIDER) ================= -->
+        <div class="bg-slate-900 py-4 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto flex items-center justify-center gap-4">
+                <div class="flex-1 h-[2px] bg-white/70"></div>
+                <div class="w-3 h-3 rounded-full bg-[#d91b36] shadow-[0_0_10px_rgba(217,27,54,0.6)]"></div>
+                <div class="flex-1 h-[2px] bg-white/70"></div>
+            </div>
+        </div>
+
+        <section class="section-min-height py-24 bg-slate-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-12 text-center">
+                    <div class="flex items-center justify-center gap-4 mb-6">
+                        <span class="text-4xl font-display text-orange-accent opacity-50">06</span>
+                        <div class="text-5xl md:text-7xl font-display italic text-white tracking-tight">Editorial Photoshoot</div>
+                    </div>
+                    <p class="text-sm font-medium uppercase tracking-[0.35em] text-orange-accent/80 mb-4">Photography</p>
+                    <h3 class="text-xl md:text-3xl font-display font-bold text-white mb-4">"Where Concepts Turn into Visual Stories."</h3>
+                    <p class="text-base text-slate-300 max-w-2xl mx-auto">Menghidupkan narasi visual melalui pendekatan fotografi editorial yang berkarakter dan berorientasi pada cerita. Setiap frame dirancang secara konseptual menggabungkan eksplorasi pencahayaan artistik, pengarahan gaya (styling), dan komposisi yang presisi guna menciptakan karya visual yang tidak hanya menangkap momen, tetapi juga menyampaikan pesan mendalam dan estetika yang berkelas.</p>
+                </div>
+
+                <div class="mx-auto max-w-6xl grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 md:gap-3">
+                <!-- Baris 1 -->
+                <div class="overflow-hidden rounded-xl md:rounded-2xl shadow-sm aspect-[2616/3924]">
+                    <img src="model/Phielle.jpg" alt="Photography 1" class="w-full h-full object-cover" />
+                </div>
+                <div class="overflow-hidden rounded-xl md:rounded-2xl shadow-sm aspect-[2616/3924]">
+                    <img src="model/Phielle_29.jpg" alt="Photography 2" class="w-full h-full object-cover" />
+                </div>
+                <div class="overflow-hidden rounded-xl md:rounded-2xl shadow-sm aspect-[2616/3924]">
+                    <img src="model/Phielle_28.jpg" alt="Photography 3" class="w-full h-full object-cover" />
+                </div>
+                <div class="overflow-hidden rounded-xl md:rounded-2xl shadow-sm aspect-[2616/3924]">
+                    <img src="model/Phielle_3.jpg" alt="Photography 4" class="w-full h-full object-cover" />
+                </div>
+                <div class="overflow-hidden rounded-xl md:rounded-2xl shadow-sm aspect-[2616/3924]">
+                    <img src="model/Phielle_26.jpg" alt="Photography 5" class="w-full h-full object-cover" />
+                </div>
+                <div class="overflow-hidden rounded-xl md:rounded-2xl shadow-sm aspect-[2616/3924]">
+                    <img src="model/Phielle_5.jpg" alt="Photography 6" class="w-full h-full object-cover" />
+                </div>
+
+                <!-- Baris 2 -->
+                <div class="overflow-hidden rounded-xl md:rounded-2xl shadow-sm aspect-[2616/3924]">
+                    <img src="model/Phielle_23.jpg" alt="Photography 7" class="w-full h-full object-cover" />
+                </div>
+                <div class="overflow-hidden rounded-xl md:rounded-2xl shadow-sm aspect-[2616/3924]">
+                    <img src="model/Phielle_7.jpg" alt="Photography 8" class="w-full h-full object-cover" />
+                </div>
+                <div class="overflow-hidden rounded-xl md:rounded-2xl shadow-sm aspect-[2616/3924]">
+                    <img src="model/Phielle_18.jpg" alt="Photography 9" class="w-full h-full object-cover" />
+                </div>
+                <div class="overflow-hidden rounded-xl md:rounded-2xl shadow-sm aspect-[2616/3924]">
+                    <img src="model/Phielle_9.jpg" alt="Photography 10" class="w-full h-full object-cover" />
+                </div>
+                <div class="overflow-hidden rounded-xl md:rounded-2xl shadow-sm aspect-[2616/3924]">
+                    <img src="model/Phielle_13.jpg" alt="Photography 11" class="w-full h-full object-cover" />
+                </div>
+                <div class="overflow-hidden rounded-xl md:rounded-2xl shadow-sm aspect-[2616/3924]">
+                    <img src="model/Phielle_11.jpg" alt="Photography 12" class="w-full h-full object-cover" />
+                </div>
+
+                <!-- Baris 3 -->
+                <div class="overflow-hidden rounded-xl md:rounded-2xl shadow-sm aspect-[2616/3924]">
+                    <img src="model/Phielle_34.jpg" alt="Photography 13" class="w-full h-full object-cover" />
+                </div>
+                <div class="overflow-hidden rounded-xl md:rounded-2xl shadow-sm aspect-[2616/3924]">
+                    <img src="model/Phielle_22.jpg" alt="Photography 14" class="w-full h-full object-cover" />
+                </div>
+                <div class="overflow-hidden rounded-xl md:rounded-2xl shadow-sm aspect-[2616/3924]">
+                    <img src="model/Phielle_14.jpg" alt="Photography 15" class="w-full h-full object-cover" />
+                </div>
+                <div class="overflow-hidden rounded-xl md:rounded-2xl shadow-sm aspect-[2616/3924]">
+                    <img src="model/Phielle_2.jpg" alt="Photography 16" class="w-full h-full object-cover" />
+                </div>
+                <div class="overflow-hidden rounded-xl md:rounded-2xl shadow-sm aspect-[2616/3924]">
+                    <img src="model/Phielle_16.jpg" alt="Photography 17" class="w-full h-full object-cover" />
+                </div>
+                <div class="overflow-hidden rounded-xl md:rounded-2xl shadow-sm aspect-[2616/3924]">
+                    <img src="model/Phielle_32.jpg" alt="Photography 18" class="w-full h-full object-cover" />
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ELEMEN PEMISAH (DIVIDER) ================= -->
+        <div class="bg-slate-900 py-4 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto flex items-center justify-center gap-4">
+                <div class="flex-1 h-[2px] bg-white/70"></div>
+                <div class="w-3 h-3 rounded-full bg-[#d91b36] shadow-[0_0_10px_rgba(217,27,54,0.6)]"></div>
+                <div class="flex-1 h-[2px] bg-white/70"></div>
+            </div>
+        </div>
+
+        <section class="py-24 bg-slate-900">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header Text -->
+                <div class="mb-16 text-center max-w-3xl mx-auto">
+                    <div class="flex items-center justify-center gap-3 mb-3">
+                        <span class="text-3xl md:text-4xl font-serif italic text-orange-accent/60">07</span>
+                        <h2 class="text-4xl md:text-6xl font-serif italic text-white tracking-tight">Brand Activation</h2>
+                    </div>
+                    
+                    <p class="text-xs font-semibold tracking-[0.35em] text-orange-accent uppercase mb-4">POLYGON</p>
+                    
+                    <p class="text-sm md:text-base leading-relaxed text-slate-300 mb-3">
+                        Adalah proses promosi interaktif yang dirancang untuk menghidupkan sebuah merek (brand) di tengah masyarakat melalui pengalaman langsung (experiential marketing) yang berkesan.
+                    </p>
+                    <p class="text-sm md:text-base leading-relaxed text-slate-300">
+                        Tujuan utamanya bukan sekadar jualan instan pada hari itu, melainkan membangun kedekatan emosional (emotional connection) dan mengubah konsumen pasif menjadi pelanggan yang loyal.
+                    </p>
+                </div>
+
+                <!-- 2x2 Grid Gallery -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
+                    <!-- Card 1 -->
+                    <div>
+                        <div class="aspect-[16/10] w-full rounded-2xl md:rounded-[28px] overflow-hidden bg-stone-200">
+                            <img src="Brandactivation/DSC00278.jpg" alt="Polygon Brand Activation 1" class="w-full h-full object-cover" />
+                        </div>
+                        <span class="block mt-2 text-xs font-mono text-stone-400 pl-1">1</span>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div>
+                        <div class="aspect-[16/10] w-full rounded-2xl md:rounded-[28px] overflow-hidden bg-stone-200">
+                            <img src="Brandactivation/6.jpg" alt="Polygon Brand Activation 2" class="w-full h-full object-cover" />
+                        </div>
+                        <span class="block mt-2 text-xs font-mono text-stone-400 pl-1">2</span>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div>
+                        <div class="aspect-[16/10] w-full rounded-2xl md:rounded-[28px] overflow-hidden bg-stone-200">
+                            <img src="Brandactivation/DSC09869.jpg" alt="Polygon Brand Activation 3" class="w-full h-full object-cover" />
+                        </div>
+                        <span class="block mt-2 text-xs font-mono text-stone-400 pl-1">3</span>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div>
+                        <div class="aspect-[16/10] w-full rounded-2xl md:rounded-[28px] overflow-hidden bg-stone-200">
+                            <img src="Brandactivation/DSC09840.jpg" alt="Polygon Brand Activation 4" class="w-full h-full object-cover" />
+                        </div>
+                        <span class="block mt-2 text-xs font-mono text-stone-400 pl-1">4</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 08: Portfolio Showreel -->
+        <section class="py-24 bg-slate-900">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-16 text-center max-w-3xl mx-auto">
+                    <div class="flex items-center justify-center gap-3 mb-3">
+                        <span class="text-3xl md:text-4xl font-serif italic text-orange-accent/60">08</span>
+                        <h2 class="text-4xl md:text-6xl font-serif italic text-white tracking-tight">Portfolio Showreel</h2>
+                    </div>
+
+                    <p class="text-xs font-semibold tracking-[0.35em] text-orange-accent uppercase mb-4">My Works</p>
+
+                    <p class="text-sm md:text-base leading-relaxed text-slate-300">
+                        Koleksi video dan karya visual terbaik dari berbagai proyek yang telah saya tangani, menampilkan pengalaman dalam produksi konten, cinematography, dan creative storytelling.
+                    </p>
+                </div>
+
+                <div class="max-w-5xl mx-auto">
+                    <div class="rounded-[28px] overflow-hidden border border-orange-accent/20 bg-stone-900 shadow-2xl">
+                        <div class="relative">
+                            <video
+                                class="w-full h-[420px] md:h-[560px] object-cover"
+                                controls
+                                playsinline
+                            >
+                                <source src="Showreel.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent pointer-events-none"></div>
+                        </div>
+                        <div class="p-5 md:p-6 flex items-center justify-between gap-4">
+                            <div>
+                                <p class="text-[10px] md:text-xs font-semibold tracking-[0.35em] text-orange-accent uppercase">Showreel</p>
+                            </div>
+                            <div class="w-12 h-12 rounded-full border border-white/60 flex items-center justify-center bg-white/10 backdrop-blur-sm">
+                                <svg class="w-5 h-5 text-white ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-slate-950">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-12 text-center">
+                    <p class="text-xs font-semibold tracking-[0.35em] text-orange-accent uppercase mb-3">More Work</p>
+                    <h2 class="text-4xl md:text-6xl font-display font-bold uppercase tracking-tight text-white">Selected Highlights</h2>
+                </div>
+
+                <div class="relative">
+                    <button id="prevHighlight" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 hidden md:flex w-12 h-12 rounded-full border border-orange-accent/60 bg-slate-950/70 text-white items-center justify-center shadow-lg backdrop-blur-sm hover:bg-orange-accent transition-colors">‹</button>
+                    <button id="nextHighlight" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 hidden md:flex w-12 h-12 rounded-full border border-orange-accent/60 bg-slate-950/70 text-white items-center justify-center shadow-lg backdrop-blur-sm hover:bg-orange-accent transition-colors">›</button>
+
+                    <div id="highlightTrack" class="flex gap-5 md:gap-6 overflow-x-auto snap-x snap-mandatory px-0 md:px-12 pb-2 scrollbar-hide"></div>
+                </div>
+
+                <div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 p-6">
+                    <button id="closeLightbox" class="absolute top-6 right-6 text-3xl text-white hover:text-orange-accent z-20">×</button>
+                    <button id="prevLightbox" class="absolute left-6 top-1/2 -translate-y-1/2 text-4xl text-white hover:text-orange-accent z-20">‹</button>
+                    <button id="nextLightbox" class="absolute right-6 top-1/2 -translate-y-1/2 text-4xl text-white hover:text-orange-accent z-20">›</button>
+                    <img id="lightboxImage" src="" alt="Expanded project preview" class="max-h-[85vh] max-w-[90vw] rounded-2xl object-contain shadow-2xl" />
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ELEMEN PEMISAH (DIVIDER) ================= -->
+        <div class="bg-slate-900 py-4 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto flex items-center justify-center gap-4">
+                <div class="flex-1 h-[2px] bg-white/70"></div>
+                <div class="w-3 h-3 rounded-full bg-[#d91b36] shadow-[0_0_10px_rgba(217,27,54,0.6)]"></div>
+                <div class="flex-1 h-[2px] bg-white/70"></div>
+            </div>
+        </div>
+
+        <section id="contact" class="section-min-height py-24 bg-orange-deep text-white relative overflow-hidden flex items-center">
+             <!-- Abstract background pattern -->
+             <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#FFBA08 1px, transparent 1px); background-size: 20px 20px;"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    
+                    <div class="flex justify-center">
+                        <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-full border-4 border-red-600 overflow-hidden shadow-2xl">
+                             <img src="https://placehold.co/600x600/CC0000/FFFFFF?text=Thank+You" alt="M. Ikhwan Farhat Contact" class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+
+                    <div class="text-center lg:text-left space-y-6">
+                        <h3 class="text-3xl font-serif italic text-yellow-highlight">Let's Connect</h3>
+                        <h2 class="text-6xl sm:text-8xl font-display font-bold uppercase tracking-widest text-slate-50">Thank<br>You</h2>
+                        
+                        <div class="pt-8 space-y-4">
+                            <div class="flex items-center justify-center lg:justify-start space-x-4">
+                                <div class="bg-slate-800 text-orange-accent p-3 rounded-full">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                </div>
+                                <span class="text-xl font-light text-slate-100">+62 857-1455-1180</span>
+                            </div>
+                            <div class="flex items-center justify-center lg:justify-start space-x-4">
+                                <div class="bg-slate-800 text-orange-accent p-3 rounded-full">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                </div>
+                                <div class="flex flex-col items-center lg:items-start">
+                                    <span class="text-xl font-light text-slate-100">ikhwan.farhat@gmail.com</span>
+                                    <a href="https://trilogi-makna-creative.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm text-yellow-highlight hover:text-white transition-colors underline decoration-1 underline-offset-4 mt-1">
+                                        trilogi-makna-creative.vercel.app
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="pt-8 text-sm text-yellow-highlight font-medium tracking-wide">
+                            Let's create something meaningful together.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.replace('bg-slate-900/90', 'bg-slate-900/95');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.replace('bg-slate-900/95', 'bg-slate-900/90');
+            }
+        });
+
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        const comproImages = [
+            '21.jpg', '22.jpg', '23.jpg', '24.jpg', '25.jpg', '26.jpg',
+            '27.jpg', '28.jpg', '29.jpg', '30.jpg', '31.jpg', '32.jpg', '33.jpg'
+        ];
+
+        const highlightTrack = document.getElementById('highlightTrack');
+        const prevHighlight = document.getElementById('prevHighlight');
+        const nextHighlight = document.getElementById('nextHighlight');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const closeLightbox = document.getElementById('closeLightbox');
+        const prevLightbox = document.getElementById('prevLightbox');
+        const nextLightbox = document.getElementById('nextLightbox');
+        let currentLightboxIndex = 0;
+
+        if (highlightTrack) {
+            comproImages.forEach((file, index) => {
+                const article = document.createElement('article');
+                article.className = 'group relative min-w-full md:min-w-[calc(100%/3-1.3rem)] snap-center overflow-hidden rounded-[28px] border border-orange-accent/15 bg-slate-900 shadow-2xl cursor-pointer';
+                article.innerHTML = `
+                    <img src="compro/${file}" alt="Selected highlight ${index + 1}" class="w-full aspect-[16/9] object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent"></div>
+                `;
+
+                article.addEventListener('click', () => {
+                    currentLightboxIndex = index;
+                    lightboxImage.src = `compro/${file}`;
+                    lightbox.classList.remove('hidden');
+                    lightbox.classList.add('flex');
+                });
+
+                highlightTrack.appendChild(article);
+            });
+        }
+
+        let highlightIndex = 0;
+
+        function updateHighlightCarousel() {
+            const cards = highlightTrack.querySelectorAll('article');
+            if (!cards.length) return;
+
+            const gap = parseFloat(getComputedStyle(highlightTrack).gap) || 24;
+            const cardWidth = cards[0].offsetWidth + gap;
+            highlightTrack.scrollTo({ left: highlightIndex * cardWidth, behavior: 'smooth' });
+        }
+
+        prevHighlight?.addEventListener('click', () => {
+            const cards = highlightTrack.querySelectorAll('article');
+            if (highlightIndex > 0) {
+                highlightIndex--;
+            }
+            updateHighlightCarousel(cards);
+        });
+
+        nextHighlight?.addEventListener('click', () => {
+            const cards = highlightTrack.querySelectorAll('article');
+            if (highlightIndex < cards.length - 1) {
+                highlightIndex++;
+            }
+            updateHighlightCarousel(cards);
+        });
+
+        function closeLightboxModal() {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+        }
+
+        function updateLightboxImage(index) {
+            if (index >= 0 && index < comproImages.length) {
+                currentLightboxIndex = index;
+                lightboxImage.src = `compro/${comproImages[index]}`;
+                lightboxImage.alt = `Selected highlight ${index + 1}`;
+            }
+        }
+
+        closeLightbox?.addEventListener('click', closeLightboxModal);
+
+        prevLightbox?.addEventListener('click', () => {
+            const newIndex = currentLightboxIndex - 1;
+            if (newIndex >= 0) {
+                updateLightboxImage(newIndex);
+            }
+        });
+
+        nextLightbox?.addEventListener('click', () => {
+            const newIndex = currentLightboxIndex + 1;
+            if (newIndex < comproImages.length) {
+                updateLightboxImage(newIndex);
+            }
+        });
+
+        lightbox?.addEventListener('click', (event) => {
+            if (event.target === lightbox) {
+                closeLightboxModal();
+            }
+        });
+
+        window.addEventListener('keydown', (event) => {
+            if (lightbox.classList.contains('hidden')) return;
+            
+            if (event.key === 'Escape') {
+                closeLightboxModal();
+            } else if (event.key === 'ArrowLeft') {
+                const newIndex = currentLightboxIndex - 1;
+                if (newIndex >= 0) {
+                    updateLightboxImage(newIndex);
+                }
+            } else if (event.key === 'ArrowRight') {
+                const newIndex = currentLightboxIndex + 1;
+                if (newIndex < comproImages.length) {
+                    updateLightboxImage(newIndex);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
